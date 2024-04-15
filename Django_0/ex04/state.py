@@ -18,11 +18,11 @@ def find_capital():
 		"CO": "Denver"
 	}
 
-	for states_keys, states_values in states.items():
-		if sys.argv[1] == states_keys:
-			for capital_keys, capital_values in capital_cities.items():
-				if states_values == capital_keys:
-					print(capital_values)
+	for capital_keys, capital_values in capital_cities.items():
+		if sys.argv[1] == capital_values:
+			for states_keys, states_values in states.items():
+				if capital_keys == states_values:
+					print(states_keys)
 					return
 	print("Unknown state")
 
